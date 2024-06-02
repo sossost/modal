@@ -56,3 +56,5 @@ function Modal({ title, content, resolve, reject }: ModalProps) {
   );
 }
 ```
+
+참고 : https://www.youtube.com/watch?v=gMzYOE0TV0g&t=470s
