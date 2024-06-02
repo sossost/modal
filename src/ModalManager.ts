@@ -40,6 +40,15 @@ class ModalManager {
     this.updateState();
   }
 
+  remove(key: string, reason: unknown = `Close modal: ${key}`) {
+    const modalIndex = this.modalStack.findIndex((modal) => modal.key === key);
+    if (modalIndex !== -1) {
+      this.modalStack[modalIndex].reject(reason);
+      this.modalStack.splice(modalIndex, 1);
+      this.updateState();
+    }
+  }
+
   push(
     key: string,
     modal: Modal,
