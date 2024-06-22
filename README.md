@@ -35,7 +35,7 @@ function Component() {
       });
 
       onConfirm();
-    } catch (error) {
+    } catch {
       onCancel();
     }
   };
@@ -49,8 +49,8 @@ function Modal({ title, content, resolve, reject }: ModalProps) {
       <h2 className="modal-title">{title as string}</h2>
       <p className="modal-content">{content as string}</p>
       <div className="button-container">
-        <button onClick={() => resolve("확인")}>확인</button>
-        <button onClick={() => reject("취소")}>취소</button>
+        <button onClick={resolve}>확인</button>
+        <button onClick={reject}>취소</button>
       </div>
     </div>
   );
