@@ -47,7 +47,7 @@ function Modal({ title, content, resolve, reject }) {
   return (
     <div className="modal-container">
       <h2 className="modal-title">{title}</h2>
-      <p className="modal-content">{content=}</p>
+      <p className="modal-content">{content}</p>
       <div className="button-container">
         <button onClick={resolve}>확인</button>
         <button onClick={reject}>취소</button>
